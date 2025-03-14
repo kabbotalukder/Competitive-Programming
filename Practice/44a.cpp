@@ -26,7 +26,18 @@ using namespace __gnu_pbds;
 typedef tree<int, null_type, less<int>, rb_tree_tag, tree_order_statistics_node_update> pbds; // find_by_order, order_of_key
 
 void solution(){
-    cout << "hello world" << endl;
+    ll n, count = 0;
+    cin >> n;
+    map <string, ll> mp;
+    while(n--)
+    {
+        string s, c;
+        cin >> s >> c;
+        mp[s + " " + c]++;
+        if(mp[s + " " + c] == 1)
+            count++;
+    }
+    cout << count << endl;
 }
 
 int main(){
